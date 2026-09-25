@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopcion De Gatos</title>
+    <meta
+      name="description"
+      content="Blog y galería de gatos con historias, condiciones y curiosidades felinas."
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="site-header shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#inicio">
+            <span class="brand-mark">🐾</span>
+            Adopta Diferente
+          </a>
+        
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-2">
+              <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+              <li class="nav-item"><a class="nav-link" href="#condiciones">Condiciones</a></li>
+              <li class="nav-item"><a class="nav-link" href="formulario-pqr.html">Adopta</a></li>
+            </ul>
+            <form id="search-form" class="header-search" role="search">
+              <label class="visually-hidden" for="site-search">Buscar historias</label>
+              <input
+                id="site-search"
+                class="form-control"
+                type="search"
+                placeholder="Buscar historias..."
+                autocomplete="off"
+              />
+              <button class="btn btn-primary btn-sm" type="submit">Buscar</button>
+            </form>
+            <div class="auth-actions d-flex gap-2 align-items-center">
+              <span id="user-greeting" class="d-none text-dark me-3"></span>
+              <button id="btn-login" class="btn btn-primary btn-sm">Inicio de sesión</button>
+              <button id="btn-logout" class="btn btn-danger btn-sm d-none">Cerrar sesión</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="hero-visual shadow-lg hero-main-image">
+                <img
+                  src="imagenes/gato-pidienddo ayuda.jpg"
+                  alt="Gato con un aspecto curioso y expresivo"
+                  class="img-fluid rounded-4"
+                />
+              </div>
+              <span class="badge rounded-pill hero-badge mb-3">Adopción responsable • Amor • Hogar</span>
+              <h1 class="display-4 fw-bold mb-3">Encuentra un compañero que necesita un hogar.</h1>
+              <p class="lead text-secondary mb-4">
+                Conoce gatos únicos, descubre sus necesidades y da el primer paso para cambiar una vida.
+                Cada adopción está acompañada de información y mucho cariño.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <a href="#historia" class="btn btn-primary btn-lg px-4">Explorar historias</a>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="rescue-card rescue-card-compact shadow-lg hero-rescue-card">
+                <span class="rescue-icon" aria-hidden="true">🐱</span>
+                <p class="eyebrow">Ayuda urgente</p>
+                <h2>¿Encontraste un gato que necesita ayuda?</h2>
+                <p>Repórtalo para que podamos coordinar su rescate y brindarle atención.</p>
+                <form id="rescue-form" class="rescue-form">
+                  <label for="rescue-email">Correo electrónico</label>
+                  <input id="rescue-email" class="form-control" type="email" placeholder="correo@ejemplo.com" required />
+                  <label for="rescue-location">¿Dónde lo encontraste?</label>
+                  <input id="rescue-location" class="form-control" type="text" placeholder="Barrio o dirección" required />
+                  <label for="rescue-description">Cuéntanos qué sucede</label>
+                  <textarea id="rescue-description" class="form-control" rows="3" placeholder="Describe su estado o situación" required></textarea>
+                  <button class="btn btn-primary w-100" type="submit">Solicitar rescate</button>
+                  <p id="rescue-message" class="rescue-message d-none" role="status"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-5" id="historia">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <p class="eyebrow">La historia de Rigby</p>
+            <h2>Un gato que enseña a mirar más allá de lo que parece.</h2>
+          </div>
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <img
+                src="imagenes/fae226a48a754383ecbd5ceb5ee5f416.jpg"
+                alt="Gato con ojos verdes"
+                class="img-fluid rounded-4 shadow"
+              />
+            </div>
+            <div class="col-lg-7">
+              <div class="story-card p-4 p-lg-5">
+                <p class="lead">
+                  Rigby tiene miotonía congénita, una condición poco común que hace que sus músculos se
+                  endurezcan cuando se emociona. Aun así, eso no le resta ni un ápice de ternura ni de
+                  personalidad.
+                </p>
+                <ul class="feature-list list-unstyled mt-4">
+                  <li><span>✓</span> Condiciones congénitas que requieren atención temprana.</li>
+                  <li><span>✓</span> Necesidad de cariño, observación y cuidados profesionales.</li>
+                  <li><span>✓</span> Aprender a entender cada comportamiento felino con paciencia.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="album-section py-5 bg-light" id="condiciones">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <p class="eyebrow">gatos</p>
+            <h2>Gatos En Adopcion</h2>
+            <p class="lead text-muted">Gatos diferentes que necesitan un hogar</p>
+          </div>
+
+          <div id="gallery-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card album-card shadow-sm h-100">
+                <img src="imagenes/46b630e0a4cf1fec3c9d96207725d653.jpg" alt="Gato expresivo" class="card-img-top" />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-2">Adopción especial</span>
+                  <h5 class="card-title">Un hogar para un gatito único</h5>
+                  <p class="card-text text-muted">
+                    Conoce sus necesidades, prepara tu hogar y acompáñalo con paciencia durante su adaptación.
+                  </p>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary info-button" data-age="2 años" data-vaccines="Triple felina y rabia al día" data-rescue="Fue rescatado de la calle con una lesión en una pata y recibió atención veterinaria.">Conocer</button>
+                      <button type="button" class="btn btn-sm btn-primary adopt-button" data-pet="Gatito único">Adoptar</button>
+                    </div>
+                    <small class="text-muted">5 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card album-card shadow-sm h-100">
+                <img src="imagenes/gato-bailando.gif" alt="Gato bailando" class="card-img-top" />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">Cariñoso</span>
+                  <h5 class="card-title">Un compañero lleno de alegría</h5>
+                  <p class="card-text text-muted">
+                    Su energía y ternura están esperando a una familia que quiera compartir cada día con él.
+                  </p>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary info-button" data-age="1 año" data-vaccines="Triple felina y desparasitación al día" data-rescue="Fue encontrado en un parque, siguiendo a las personas en busca de comida y cariño.">Conocer</button>
+                      <button type="button" class="btn btn-sm btn-primary adopt-button" data-pet="Gato alegre">Adoptar</button>
+                    </div>
+                    <small class="text-muted">3 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card album-card shadow-sm h-100">
+                <img src="imagenes/fae226a48a754383ecbd5ceb5ee5f416.jpg" alt="Gato con mirada intensa" class="card-img-top" />
+                <div class="card-body">
+                  <span class="badge bg-warning mb-2">Cuidados</span>
+                  <h5 class="card-title">Adopta con compromiso</h5>
+                  <p class="card-text text-muted">
+                    Aprende qué cuidados necesita este gato y descubre si puedes ofrecerle una vida tranquila y feliz.
+                  </p>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary info-button" data-age="3 años" data-vaccines="Triple felina aplicada; rabia pendiente de refuerzo" data-rescue="Fue rescatado de una casa abandonada y recuperado con cuidados y alimentación especial.">Conocer</button>
+                      <button type="button" class="btn btn-sm btn-primary adopt-button" data-pet="Gato especial">Adoptar</button>
+                    </div>
+                    <small class="text-muted">7 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card album-card shadow-sm h-100">
+                <div class="card-img-placeholder bg-secondary" style="height: 240px;">
+                  <img src="imagenes/fae226a48a754383ecbd5ceb5ee5f416.jpg" alt="Rigby" class="img-fluid" />
+                </div>
+                <div class="card-body">
+                  <span class="badge bg-info mb-2">Adopción consciente</span>
+                  <h5 class="card-title">Rigby busca una familia</h5>
+                  <p class="card-text text-muted">
+                    Rigby necesita una familia paciente que quiera acompañar su condición con amor y cuidados.
+                  </p>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary info-button" data-age="4 años" data-vaccines="Triple felina y rabia al día" data-rescue="Rigby fue rescatado después de ser encontrado solo en la calle; ahora necesita una familia paciente.">Conocer</button>
+                      <button type="button" class="btn btn-sm btn-primary adopt-button" data-pet="Rigby">Adoptar</button>
+                    </div>
+                    <small class="text-muted">10 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card album-card shadow-sm h-100">
+                <div class="card-img-placeholder bg-primary cursor-card" style="height: 240px;">
+                  <img src="imagenes/Cat.jpg" alt="Gato en adopción" class="img-fluid" />
+                </div>
+                <div class="card-body">
+                  <span class="badge bg-danger mb-2">Adopción</span>
+                  <h5 class="card-title">Gatos listos para ser adoptados</h5>
+                  <p class="card-text text-muted">
+                    Conoce a los gatos que esperan una familia amorosa. ¡Tu nuevo mejor amigo puede estar aquí!
+                  </p>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary info-button" data-age="8 meses" data-vaccines="Primera dosis de triple felina y desparasitación" data-rescue="tiene miopia.">Conocer</button>
+                      <button type="button" class="btn btn-sm btn-primary adopt-button" data-pet="Gato en adopción">Adoptar</button>
+                    </div>
+                    <small class="text-muted">8 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card album-card shadow-sm h-100">
+                <div class="card-img-placeholder bg-success cursor-card" style="height: 240px;">
+                  <img src="imagenes/descarga (5).jpg" alt="Gato feliz" class="img-fluid" />
+                </div>
+                <div class="card-body">
+                  <span class="badge bg-secondary mb-2">Familias felices</span>
+                  <h5 class="card-title">Adoptar cambia dos vidas</h5>
+                  <p class="card-text text-muted">
+                    Descubre cómo otras familias encontraron un compañero y anímate a comenzar tu propia historia.
+                  </p>
+                </div>
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary info-button" data-age="2 años y 6 meses" data-vaccines="Triple felina, rabia y desparasitación al día" data-rescue="tiene una joroba bofff .">Conocer</button>
+                      <button type="button" class="btn btn-sm btn-primary adopt-button" data-pet="Gato feliz">Adoptar</button>
+                    </div>
+                    <small class="text-muted">6 min</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="search-empty" class="search-empty d-none text-center" role="status">
+            No encontramos gatos o historias para esa búsqueda.
+          </p>
+        </div>
+      </section>
+
+    <div class="auth-modal" id="auth-modal" aria-hidden="true">
+      <div class="auth-backdrop" id="modal-backdrop"></div>
+      <div class="auth-panel" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+       <div class="auth-header">
+         <h2 id="auth-title">Inicio de sesión</h2>
+         <button type="button" class="auth-close" id="modal-close" aria-label="Cerrar">×</button>
+       </div>
+
+       <div id="auth-message" class="alert d-none" role="alert" aria-live="polite"></div>
+
+       <form id="login-form" class="auth-form">
+         <div class="mb-3">
+           <label class="form-label" for="login-email">Correo electrónico</label>
+           <input id="login-email" class="form-control" type="email" placeholder="tu@email.com" required />
+         </div>
+         <div class="mb-3">
+           <label class="form-label" for="login-password">Contraseña</label>
+           <input id="login-password" class="form-control" type="password" placeholder="********" required />
+         </div>
+         <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+         <p class="text-center mb-0 mt-3">
+           ¿No tienes cuenta?
+           <a href="#" id="show-register" class="text-decoration-none">Regístrate</a>
+         </p>
+       </form>
+
+       <form id="register-form" class="auth-form d-none">
+         <div class="mb-3">
+           <label class="form-label" for="register-name">Nombre</label>
+           <input id="register-name" class="form-control" type="text" placeholder="Tu nombre" required />
+         </div>
+         <div class="mb-3">
+           <label class="form-label" for="register-email">Correo electrónico</label>
+           <input id="register-email" class="form-control" type="email" placeholder="tu@email.com" required />
+         </div>
+         <div class="mb-3">
+           <label class="form-label" for="register-password">Contraseña</label>
+           <input id="register-password" class="form-control" type="password" placeholder="Crea una contraseña" required />
+         </div>
+         <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
+         <p class="text-center mb-0 mt-3">
+           ¿Ya tienes cuenta?
+           <a href="#" id="show-login" class="text-decoration-none">Inicia sesión</a>
+         </p>
+       </form>
+      </div>
+    </div>
+
+    <footer id="contacto" class="site-footer">
+      <div class="container py-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h3 class="mb-3">Contacto</h3>
+            <p>
+              ¿Quieres darle una oportunidad a un gato? Completa el formulario de adopción y nos pondremos en contacto contigo.
+            </p>
+            <div class="footer-contact-list">
+              <a href="https://wa.me/573126617623" target="_blank" rel="noopener noreferrer">
+                <span aria-hidden="true">💬</span>
+                WhatsApp: +57 312 661 7623
+              </a>
+              <a href="https://wa.me/573218440603" target="_blank" rel="noopener noreferrer">
+                <span aria-hidden="true">💬</span>
+                WhatsApp: +57 321 844 0603
+              </a>
+              <a href="https://www.instagram.com/gmascotecacol/" target="_blank" rel="noopener noreferrer">
+                <span aria-hidden="true">📷</span>
+                Instagram: hclm
+              </a>
+            </div>
+            <img class="footer-gif" src="imagenes/saludando.gif" alt="Gato saludando" />
+          </div>
+
+          <div class="col-lg-6">
+            <a
+              class="location-card"
+              href="https://www.google.com/maps/search/?api=1&query=Av.%2033%20%2380a-25%2C%20Laureles%20-%20Estadio%2C%20Medell%C3%ADn%2C%20Antioquia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="imagenes/ubicasion.png" alt="Ubicación de La Mascot*teca en Medellín" />
+              <span>
+                <strong>Visítanos</strong>
+                Av. 33 #80a-25, Laureles - Estadio, Medellín, Antioquia
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <div class="row">
+          <div class="col-12 text-center">
+            © 2026 Gatos Diferentes. Todos los derechos reservados.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="inicio.js"></script>
+  </body>
+</html>

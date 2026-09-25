@@ -1,0 +1,209 @@
+:root {
+  --bg-soft: #f8f5ff;
+  --bg-mint: #ecfffb;
+  --lavender: #7667f5;
+  --lavender-dark: #5849d9;
+  --mint: #27c7b7;
+  --mint-dark: #14998e;
+  --peach: #ffb98f;
+  --rose: #ff8ea1;
+  --ink: #1f2d3d;
+  --muted: #5c6b7b;
+  --line: #e4e1ff;
+  --card: rgba(255, 255, 255, 0.88);
+}
+
+body {
+  background:
+    linear-gradient(135deg, rgba(255, 250, 245, 0.72), rgba(247, 243, 255, 0.8)),
+    url('imagenes/adopcion.jpg') center/cover no-repeat fixed;
+  color: var(--ink);
+}
+
+.pqr-card {
+  width: min(100%, 720px);
+  margin: 32px auto;
+  border: 1px solid rgba(118, 103, 245, 0.12);
+  border-radius: 1.7rem;
+  overflow: hidden;
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 26px 60px -24px rgba(88, 73, 217, 0.38) !important;
+  position: relative;
+}
+
+.pqr-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(39, 199, 183, 0.08), rgba(255, 185, 143, 0.12));
+  pointer-events: none;
+}
+
+.pqr-card .card-body {
+  padding: 3rem 2.7rem 2.8rem !important;
+  position: relative;
+  z-index: 1;
+}
+
+.pqr-card .card-title {
+  color: var(--ink);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.6rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+  padding: 0.35rem 0;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-button span:first-child {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.back-button:hover {
+  color: var(--lavender-dark);
+  transform: translateX(-0.2rem);
+}
+
+.back-button:focus-visible {
+  outline: 3px solid rgba(118, 103, 245, 0.3);
+  outline-offset: 0.2rem;
+  border-radius: 0.35rem;
+}
+
+.pqr-card .card-body > p {
+  color: var(--muted) !important;
+  font-size: 1.04rem;
+}
+
+.pqr-card .form-label {
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pqr-card .form-control,
+.pqr-card .form-select {
+  min-height: 3.1rem;
+  border: 1.5px solid var(--line);
+  border-radius: 0.9rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.8rem 1rem;
+  box-shadow: inset 0 1px 2px rgba(31, 45, 61, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pqr-card textarea.form-control {
+  min-height: 11rem;
+  resize: vertical;
+}
+
+#adoption-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.pqr-card .form-control:focus,
+.pqr-card .form-select:focus {
+  border-color: var(--lavender);
+  box-shadow: 0 0 0 0.25rem rgba(118, 103, 245, 0.14);
+  background: #ffffff;
+}
+
+.pqr-card .form-control::placeholder,
+.pqr-card .form-select::placeholder {
+  color: #8b99ab;
+}
+
+.pqr-card .form-control[readonly] {
+  background: linear-gradient(135deg, rgba(39, 199, 183, 0.08), rgba(118, 103, 245, 0.05));
+  color: var(--mint-dark);
+  font-weight: 600;
+}
+
+.pqr-card .form-check-label {
+  color: var(--muted);
+}
+
+.pqr-card .form-check-input {
+  width: 1.08rem;
+  height: 1.08rem;
+  border: 1.5px solid rgba(118, 103, 245, 0.5);
+}
+
+.pqr-card .form-check-input:checked {
+  background-color: var(--lavender);
+  border-color: var(--lavender);
+  box-shadow: 0 0 0 0.2rem rgba(118, 103, 245, 0.18);
+}
+
+.pqr-card .btn {
+  min-height: 3.1rem;
+  border-radius: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.pqr-card .btn-primary {
+  border: 0;
+  background: linear-gradient(135deg, var(--lavender), var(--mint));
+  box-shadow: 0 14px 28px -16px rgba(88, 73, 217, 0.7);
+}
+
+.pqr-card .btn-primary:hover {
+  background: linear-gradient(135deg, var(--lavender-dark), var(--mint-dark));
+}
+
+.pqr-card .btn-outline-secondary {
+  color: var(--muted);
+  border: 1px solid rgba(118, 103, 245, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.pqr-card .btn-outline-secondary:hover {
+  color: var(--lavender-dark);
+  border-color: rgba(118, 103, 245, 0.45);
+  background: rgba(118, 103, 245, 0.06);
+}
+
+.adoption-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+}
+
+@media (max-width: 1100px) {
+  .adoption-layout {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .adoption-layout {
+    display: flex;
+    padding: 1rem 0;
+  }
+
+  .pqr-card {
+    margin: 1rem auto;
+  }
+
+  .pqr-card .card-body {
+    padding: 1.5rem !important;
+  }
+}

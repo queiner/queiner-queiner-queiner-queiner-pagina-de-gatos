@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitud de adopción | Adopta Diferente</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/formulario-pqr.css" />
+    <link rel="stylesheet" href="formulario-pqr.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="adoption-layout">
+        <div class="card pqr-card shadow-sm">
+        <div class="card-body p-4">
+          <button
+            type="button"
+            class="back-button"
+            id="back-button"
+            aria-label="Regresar a la página anterior"
+            title="Regresar"
+          >
+            <span aria-hidden="true">←</span>
+            <span>Regresar</span>
+          </button>
+          <h2 class="card-title text-center mb-2">Solicitud de adopción</h2>
+          <p class="text-center text-muted mb-4">
+            Cuéntanos sobre ti para encontrar el gato ideal para tu familia.
+          </p>
+
+          <form id="adoption-form">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                placeholder="Ingrese su nombre"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="documento" class="form-label">Documento de identidad:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="documento"
+                placeholder="Ingrese su documento"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Ingrese su correo electrónico"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="mascota" class="form-label">Gato que te interesa:</label>
+              <input type="text" class="form-control" id="mascota" name="mascota" readonly />
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">¿Por qué quieres adoptar?</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                rows="4"
+                placeholder="Cuéntanos sobre tu hogar, experiencia y el compromiso que deseas asumir"
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label d-block">¿Tienes experiencia cuidando mascotas?</label>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="experiencia"
+                  id="hombre"
+                  value="si"
+                  required
+                />
+                <label class="form-check-label" for="hombre">Sí</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="experiencia"
+                  id="mujer"
+                  value="no"
+                />
+                <label class="form-check-label" for="mujer">No</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="experiencia"
+                  id="otro"
+                  value="aprendiendo"
+                />
+                <label class="form-check-label" for="otro">Estoy aprendiendo</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="tipo_pqr" class="form-label">Tipo de vivienda:</label>
+              <select class="form-select" id="tipo_pqr" required>
+                <option value="">Selecciona una opción</option>
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="finca">Finca</option>
+              </select>
+            </div>
+
+            <div class="mb-4 form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="suscribirse"
+                value="si"
+                required
+              />
+              <label class="form-check-label" for="suscribirse">
+                Acepto ser contactado para continuar el proceso de adopción
+              </label>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-primary flex-fill">Enviar solicitud</button>
+              <button type="reset" class="btn btn-outline-secondary flex-fill">
+                Limpiar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <script>
+      const adoptionForm = document.getElementById('adoption-form');
+      const backButton = document.getElementById('back-button');
+      const petField = document.getElementById('mascota');
+      const selectedPet = new URLSearchParams(window.location.search).get('mascota');
+
+      petField.value = selectedPet || 'Quiero conocer los gatos disponibles';
+
+      backButton.addEventListener('click', () => {
+        if (window.history.length > 1) {
+          window.history.back();
+          return;
+        }
+        window.location.href = 'index.html';
+      });
+
+      adoptionForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!adoptionForm.checkValidity()) {
+          adoptionForm.reportValidity();
+          return;
+        }
+        const button = adoptionForm.querySelector('button[type="submit"]');
+        button.textContent = '¡Solicitud enviada!';
+        button.disabled = true;
+        window.setTimeout(() => {
+          window.location.href = 'index.html#condiciones';
+        }, 1600);
+      });
+    </script>
+  </body>
+</html>
